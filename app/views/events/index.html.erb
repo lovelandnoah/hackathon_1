@@ -1,5 +1,3 @@
-<div id="calendar">
-</div>
 <h1>Listing events</h1>
 
 <table>
@@ -16,7 +14,7 @@
 
 <% @room.each do |event| %>
   <tr>
-    <td><%= event.titls %></td>
+    <td><%= event.title %></td>
     <td><%= event.starts_at %></td>
     <td><%= event.ends_at %></td>
     <td><%= event.all_day %></td>

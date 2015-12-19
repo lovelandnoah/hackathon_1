@@ -11,12 +11,14 @@ $(document).ready ->
       week:
         defaultView: "agendaWeek"
 
-    events: []
+    events: [
+      
+    ]
     resources: [
       id: "1"
-      title: "room 1",
-      id: "2"
-      title: "room 2",
+      title: "Northside",
       id: "3"
-      title: "room 3"
+      title: "Garage",
+      id: "2"
+      title: "Southside"
      ]

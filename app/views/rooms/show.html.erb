@@ -1,13 +1,13 @@
 <h1><%= @room.name %></h1>
-<p><%= @room.capacity %></p>
-<p><%= @room.description %></p>
+<h4>Room Capacity: <%= @room.capacity %></h4>
+<h4>Description: <%= @room.description %></h4>
 <br />
 
 <h3>Scheduled Events</h3>
 <ul>
   <% @room.events.each do |event| %>
     <li>
-      <%= link_to event.titls, room_event_path(@room, event) %>
+      <%= link_to event.title, room_event_path(@room, event) %>
       <br/>
       Starts at: <%= event.starts_at %>
       <br/>
