@@ -16,3 +16,26 @@
  *= require_self
  */
  @import "materialize";
+
+ .text_alter label{
+  font-size: 30px !important;
+  color: black ;
+ }
+
+ .text_alter input{
+  font-size: 30px !important;
+
+ }
+
+.black-text {
+  font-size: 25px;
+  a {
+    color: black;
+  }
+}
+
+.nav-black-text {
+  a {
+    color: black;
+  }
+}
