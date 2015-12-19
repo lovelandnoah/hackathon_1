@@ -1,11 +1,29 @@
 class EventsController < ApplicationController
+  before_action :find_room
   def index
+    @events = Event.scoped
+    @events = Event.between(params['start'], params['end']) if (params['start'] && params['end'])
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @events }
+    end
   end
 
   def show
+    @event = Event.find(params[:id])
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render :json => @event }
+    end
   end
 
   def new
+    @event = Event.new
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render :json => @event }
+    end
   end
 
   def edit
