@@ -10,15 +10,8 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
-<<<<<<< a5d288a421f52f7c3c1fe58ad782327974aa30db
  *= require fullcalendar
  *= require_tree .
  *= require_self
  */
  @import "materialize";
-=======
- *= require_tree .
- *= require_self
- */
- @import "materialize";
->>>>>>> pushing from barrie

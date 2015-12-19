@@ -12,11 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-<<<<<<< a5d288a421f52f7c3c1fe58ad782327974aa30db
 //= require moment
 //= require fullcalendar
-=======
->>>>>>> pushing from barrie
 //= require materialize-sprockets
 //= require turbolinks
 //= require_tree .
