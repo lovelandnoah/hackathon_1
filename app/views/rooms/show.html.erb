@@ -2,5 +2,20 @@
 <p><%= @room.capacity %></p>
 <p><%= @room.description %></p>
 <br />
-<%= @room.events %>
-<%= link_to 'Create Event', new_room_event_path(@room) %>
+
+<h3>Scheduled Events</h3>
+<ul>
+  <% @room.events.each do |event| %>
+    <li>
+      <%= link_to event.titls, room_event_path(@room, event) %>
+      <br/>
+      Starts at: <%= event.starts_at %>
+      <br/>
+      Ends at: <%= event.ends_at %>
+    </li>
+    <hr />
+  <% end %>
+</ul>
+<%= link_to 'Create Event', new_room_event_path(@room) %> |
+<%= link_to 'Back to Rooms', rooms_path %>
+

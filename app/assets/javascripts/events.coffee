@@ -20,3 +20,6 @@ $(document).ready ->
       id: "3"
       title: "room 3"
      ]
+
+  $('.datetimepicker').datetimepicker();
+

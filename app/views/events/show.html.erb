@@ -1,2 +1,29 @@
-<h1>Events#show</h1>
-<p>Find me in app/views/events/show.html.erb</p>
+
+<p id="notice"><%= notice %></p>
+<h1><%= @event.titls %></h1>
+<hr />
+<p>
+  <b>Starts at:</b>
+  <%= @event.starts_at %>
+</p>
+
+<p>
+  <b>Ends at:</b>
+  <%= @event.ends_at %>
+</p>
+
+<p>
+  <b>All day:</b>
+  <%= @event.all_day %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @event.description %>
+</p>
+
+
+<%= link_to 'Edit Event', edit_room_event_path(@room, @event) %> |
+<%= link_to 'Cancel Event', room_event_path(@room, @event), method: :delete, data: {confirm: 'Do you really want to cancel this event?'} %> |
+<%= link_to 'Back to Room Schedule', room_path(@room) %>
+

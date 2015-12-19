@@ -16,4 +16,5 @@
 //= require fullcalendar
 //= require materialize-sprockets
 //= require turbolinks
+//= require datetimepicker
 //= require_tree .
