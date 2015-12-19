@@ -1,6 +1,6 @@
 
 <p id="notice"><%= notice %></p>
-<h1><%= @event.titls %></h1>
+<h1><%= @event.title %></h1>
 <hr />
 <p>
   <b>Starts at:</b>
@@ -12,10 +12,12 @@
   <%= @event.ends_at %>
 </p>
 
-<p>
-  <b>All day:</b>
-  <%= @event.all_day %>
-</p>
+<% if @event.all_day %>
+  <p>
+    <b>All day:</b>
+    <%= @event.all_day %>
+  </p>
+<% end %>
 
 <p>
   <b>Description:</b>

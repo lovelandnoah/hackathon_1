@@ -1,12 +1,13 @@
 <h1>Rooms</h1>
-
+<div id="calendar">
+</div>
 
 <ul>
-	<% @rooms.each do |room| %>
+  <% @rooms.each do |room| %>
   <li>
-		<%= link_to room.name, room_path(room) %>
-		<%= room.capacity %>
-		<%= room.description %>
+    <h3><%= link_to room.name, room_path(room) %></h3>
+    <h4>Room Capacity:<%= room.capacity %></h4>
+    <h4>Description<%= room.description %></h4>
   </li>
-	<% end %>
+  <% end %>
 </ul>
