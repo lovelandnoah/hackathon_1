@@ -1,0 +1,6 @@
+<h1><%= @room.name %></h1>
+<p><%= @room.capacity %></p>
+<p><%= @room.description %></p>
+<br />
+<%= @room.events %>
+<%= link_to 'Create Event', new_room_event_path(@room) %>

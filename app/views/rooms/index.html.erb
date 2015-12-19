@@ -1,0 +1,9 @@
+<h1>Rooms</h1>
+
+<div>
+	<% @rooms.each do |room| %>
+		<%= link_to room.name, room_path(room) %>
+		<%= room.capacity %>
+		<%= room.description %>
+	<% end %>
+</div>
