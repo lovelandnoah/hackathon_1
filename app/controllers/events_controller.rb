@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
-  before_action :find_room
+  before_action :find_room 
+  before_action :authenticate_user!, except: [:index, :show]
   def index
     @events = Event.scoped
     @events = Event.between(params['start'], params['end']) if (params['start'] && params['end'])
@@ -90,12 +91,12 @@ class EventsController < ApplicationController
     if @room.events.where(['starts_at BETWEEN ? AND ?', @event.starts_at, @event.ends_at]).any?
       # conflict with start time
       return false
-    end
-    if @room.events.where(['ends_at BETWEEN ? AND ?', @event.starts_at, @event.ends_at]).any?
+    elsif @room.events.where(['ends_at BETWEEN ? AND ?', @event.starts_at, @event.ends_at]).any?
       # conflic with 'end' time
       return false
+  	else
+    	return true
     end
-    return true
   end
 
 end
